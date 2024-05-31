@@ -1,0 +1,145 @@
+// sidebar toggle
+// https://github.com/StartBootstrap/startbootstrap-simple-sidebar
+#wrapper {
+  overflow-y: hidden;
+}
+
+:root {
+  --color-grey-primary: #f0f0f0;
+  --color-yellow-primary: goldenrod;   
+  --color-orange-primary: darkorange;
+  --color-green-primary: mediumseagreen;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.productList{
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.productCard{
+  position: relative;
+  background-color: white;
+  margin: 1rem;
+  flex: 1 0 25rem;
+  max-width: 30rem;
+  max-height: 60rem;
+  transition: 0.2s;
+  flex-basis: calc(25% - 2rem);
+}
+
+.productCard:hover{
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+}
+
+.productImage{
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.productName{
+  font-size: 1rem;
+}
+
+.productPrice{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.plus-minus-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 25%;
+  border: 2px solid #ed6d00;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px; /* 增加按鈕之間的間距 */
+}
+
+.plus-minus-button:last-child {
+  margin-right: 0; /* 最後一個按鈕不需要右邊的間距 */
+}
+
+.plus-minus-button:hover {
+  background-color: #ed6d00;
+  color: #fff;
+}
+
+.cartButton{
+  background-color: #08192D;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.text-muted{
+  font-weight: bold;
+}
+
+
+.w-350 {
+  /* width: 350px; */
+  width: 100%;
+}
+
+.w-350 img {
+  width: 100%;
+}
+.card-text {
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+
+.note-text {
+  color: rgb(158, 53, 0);
+}
+
+.type-text {
+  color: rgb(117, 117, 117);
+  font-weight: normal;
+}
+
+/* override by css variable */
+.no-border {
+  --bs-border-width: 0;
+}
+
+/*  card-body override */
+.no-space-x {
+  padding: var(--bs-card-spacer-y) 0;
+}
+
+.origin-p {
+  margin-bottom: 0;
+}
+
+/* grid list */
+.toolbar {
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.toolbar i {
+  font-size: 18px;
+}
+

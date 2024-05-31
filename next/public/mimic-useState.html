@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+</head>
+<body>
+<div id="app"></div>
+<script>
+  // *** 不能在嚴謹模式下測試此範例
+  const app = document.querySelector('#app');
+  const myMap = new Map(); // 儲存狀態用
+  function MyApp() {
+    const [val, setVal] = myUseState(5);
+    // 模擬 render 行為
+    app.innerHTML = `<div>
+        <div>${val}</div>
+        <div><button>click</button></div>
+        </div>`;
+    app.querySelector('button').onclick = () => {
+      setVal(val + 1);
+    }
+  }
+
+  // 狀態類別
+  class MyState {
+    constructor(init, caller) {
+      this._value = init;
+      this.belongTo = caller;
+    }
+
+    get value() {
+      return this._value;
+    }
+
+    setValue = (v) => {
+      this._value = v;
+      this.belongTo(); // 重新 render
+    }
+  }
+
+  // 模擬 useState()
+  function myUseState(init) {
+    let item;
+    if (myMap.has(myUseState.caller)) {
+      item = myMap.get(myUseState.caller)
+    } else {
+      item = new MyState(init, myUseState.caller);
+      myMap.set(myUseState.caller, item);
+    }
+    return [item.value, item.setValue];
+  }
+
+  MyApp();
+
+
+</script>
+</body>
+</html>

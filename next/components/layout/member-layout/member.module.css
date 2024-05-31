@@ -1,0 +1,20 @@
+.member-page{
+  margin-top: 80px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.logout{
+  width: 40px;
+  border: 0px;
+  background:none;
+}
+
+.component{
+  margin-left: 100px;
+}
+
+.page-link:hover{
+  background-color: #333;
+  color: #fff;
+}

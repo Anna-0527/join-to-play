@@ -1,0 +1,178 @@
+.bookingCalendarDiv2 {
+  background-color: rgba(234, 227, 203, 1);
+  border-radius: 15px;
+  width: 100%;
+}
+
+.bookingCalendarDiv3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendarTitle {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 3px rgba(37, 25, 13, 0.15);
+  padding: 18px 0 15px 25px;
+  line-height: 18px;
+}
+
+.react-calendar {
+  background-color: rgba(234, 227, 203, 1) !important;
+  border: 0 !important;
+  margin: 10px 0;
+  width: 95% !important;
+  color: #000 !important;
+}
+
+.react-calendar__tile {
+  background-color: rgba(234, 139, 7, 0.1) !important;
+  border: 1px solid rgb(229 141 20 / 54%) !important;
+  border-radius: 15px;
+  margin: 6px 7px !important;
+  letter-spacing: 1px;
+  height: 50px;
+  max-width: 66px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__navigation__label {
+  background-color: rgba(234, 139, 7, 0.1) !important;
+  border-top: 1px solid rgb(229 141 20 / 54%) !important;
+  border-bottom: 1px solid rgb(229 141 20 / 54%) !important;
+}
+
+.react-calendar__navigation__arrow {
+  background-color: rgba(234, 139, 7, 0.1) !important;
+  border: 1px solid rgb(229 141 20 / 54%) !important;
+}
+
+.react-calendar__navigation__arrow:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none !important;
+}
+
+.react-calendar__navigation__arrow:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none !important;
+}
+
+.react-calendar__navigation__label:hover,
+.react-calendar__navigation__arrow:hover {
+  background-color: #f1d282 !important;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  font-size: 15.5px;
+  text-decoration: none;
+}
+
+/* today */
+.react-calendar__tile--now {
+  background: #e8e8a4 !important;
+  color: #000 !important;
+}
+
+/* 選中的日期 */
+.react-calendar__tile:enabled:focus {
+  background-color: #f1d282 !important;
+  color: #000 !important;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f1d282 !important;
+}
+
+.react-calendar__tile--active {
+  background-color: #f1d282 !important;
+  color: #000 !important;
+}
+
+// /* 具有事件的日期 */
+// .react-calendar__tile--hasActive {
+//   background-color: #f1d282 !important;
+// }
+
+// .notCurrentMonth {
+//   color: #0000004d;
+// }
+
+.availableTimeSlots {
+  padding: 3px 30px 0px 30px;
+}
+
+.timeSlotsTitle {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.timeSlotsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+}
+
+.timeSlots {
+  background-color: rgba(234, 139, 7, 0.1);
+  border: 1px solid rgb(229 141 20 / 54%);
+  border-radius: 10px;
+  padding: 5px 0px;
+  width: 30%;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.timeSlots:hover {
+  background-color: #f1d282;
+}
+
+.timeSlots:focus {
+  background-color: #f1d282;
+}
+
+.timeSlots:active {
+  background-color: #f1d282;
+}
+
+.close {
+  color: #aaaaaa !important;
+  float: right !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+}
+
+.close:hover,
+.close:focus {
+  color: #000 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.calendarBtnDiv {
+  box-shadow: 0 -2px 3px rgba(37, 25, 13, 0.15);
+  padding: 11px 30px;
+  display: flex;
+  justify-content: end;
+}
+
+.calendarBtn {
+  background-color: #f1d282;
+  border: 1px solid rgb(229 141 20 / 54%);
+  padding: 6px 15px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+// .alreadyBooked {
+//   color: #979797;
+//   cursor: default;
+//   background-color: rgba(234, 139, 7, 0.1);
+// }

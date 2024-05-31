@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="file1" onchange="selectFile()" />
+    <img src="" alt="" id="myImg" width="300" />
+    <script>
+      const file1 = document.querySelector("#file1");
+      const myImg = document.querySelector("#myImg");
+
+      function selectFile() {
+        console.log(file1.files);
+
+        // URL.createObjectURL() 同步的操作
+        const objURL = URL.createObjectURL(file1.files[0]);
+        myImg.src = objURL;
+        console.log(objURL);
+        // "blob:http://127.0.0.1:5500/f19b283a-17f4-4523-9782-bc41d2e0772c"
+      }
+    </script>
+  </body>
+</html>

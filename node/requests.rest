@@ -1,0 +1,17 @@
+
+GET http://localhost:3001/try-qs?name=peter&age=26
+
+### requests 之間的分隔
+
+POST http://localhost:3001/try-post
+Content-Type: application/x-www-form-urlencoded
+
+account=shinder&password=789345
+
+### requests 之間的分隔
+
+POST http://localhost:3001/try-post
+Content-Type: application/json
+
+{"name":"大明",
+"email": "ming@test.com"}

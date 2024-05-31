@@ -1,0 +1,744 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* page1 */
+
+.card {
+  box-shadow: 0px 0px 3px #0003;
+  position: relative;
+  overflow: hidden;
+}
+
+.storeCollect {
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.storeCollectClicked {
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}
+
+.storeCard1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 40px;
+  padding: 0;
+}
+
+.storeCard2 {
+  width: 240px;
+  margin: 20px 10px;
+}
+
+.storeCard3 {
+  border-radius: 6px;
+}
+
+.storePic {
+  height: 133.18px;
+  width: 100%;
+}
+
+.storeAddress {
+  font-size: 13px;
+}
+
+.star {
+  color: rgb(245, 194, 67);
+  font-size: 16px;
+  display: inline;
+}
+
+.starCount {
+  color: rgb(49, 49, 49);
+  font-size: 12.5px;
+  margin-left: 6px;
+}
+
+.storeCardBody {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  padding: 0;
+  display: flex;
+}
+
+.storeLogo {
+  width: 100%;
+}
+
+.storeLogoDiv {
+  padding: 35px 5px 0 15px;
+  width: 35%;
+  position: relative;
+}
+
+.storeDesc {
+  padding: 25px 0 0 10px;
+  width: 65%;
+  position: relative;
+}
+
+.storeLi {
+  position: absolute;
+  visibility: hidden;
+  bottom: 26px;
+  width: 100%;
+  height: 0;
+  padding: 5px 0 0 15px;
+  transition: 0.25s;
+
+  li {
+    margin-top: 16px;
+  }
+}
+
+.storeCardNoButton:hover .storeLi {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 78%;
+  visibility: visible;
+  color: white;
+
+  li {
+    transition: 0.25s;
+    z-index: 1;
+  }
+}
+
+.card:hover .bookingBtn {
+  border-radius: 0 0 5px 5px;
+}
+
+.storeCardNoButton:not(:hover) .storeLi li {
+  color: transparent;
+}
+
+.bookingBtn {
+  width: 100%;
+  height: 13%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #60492f;
+  opacity: 0.8;
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: 5;
+
+  &:hover {
+    transition: 0.2s;
+    background-color: rgb(77, 58, 37);
+    letter-spacing: 16px;
+    text-align: center;
+  }
+}
+
+/* page2 */
+.gameName {
+  font-size: 12px;
+}
+
+.gameTag {
+  padding-right: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+// .imgDiv {
+//   padding: 12px;
+//   background-color: #fff;
+//   border-radius: 20px;
+//   box-shadow: 0px 3px 8px #bbb;
+// }
+
+.gameImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.gameSelect {
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.gameText {
+  padding: 60px 50px;
+  line-height: 32px;
+}
+
+.gameTitle {
+  margin: -5px 0 40px 0;
+  letter-spacing: 1px;
+  font-size: 28px;
+}
+
+.game4Info {
+  letter-spacing: 1px;
+}
+
+.betweenIcon {
+  padding: 0 18px;
+}
+
+.priceAfter {
+  font-size: 12.3px;
+  padding-left: 1px;
+}
+
+.gameBtn {
+  color: rgb(85, 85, 85);
+  font-weight: 800;
+  padding: 4px 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+
+  &:hover .gameBtnArrow {
+    transform: translate(70%, 0%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  position: relative;
+
+  /* 讓 ::after 偽元素相對於 .gameBtn 元素定位 */
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    /* 絕對定位，相對於 .gameBtn 元素 */
+    bottom: 2px;
+
+    /* 底部對齊 */
+    left: 43.5%;
+
+    /* 左側對齊 */
+    width: 11%;
+
+    height: 0.5px;
+
+    /* 底線高度 */
+    background-color: #60492f;
+
+    /* 底線顏色 */
+    transition: width 0.3s ease;
+
+    /* 過渡效果，寬度改變 */
+  }
+
+  &:hover::after {
+    width: 0;
+
+    /* 滑鼠懸停時，底線寬度變為 0，從右向左消失 */
+  }
+}
+
+@media screen and (max-width:376px) {
+  .gameTitle {
+    display: none;
+  }
+
+  .gameSelect {
+    margin-top: 30px;
+  }
+
+  .gameImgDiv {
+    padding: 0;
+  }
+
+  .gameText {
+    padding-top: 40px;
+  }
+
+  .betweenIcon2 {
+    display: none;
+  }
+
+  .game4Info {
+    padding-left: 20px;
+  }
+
+  .dollarIcon {
+    flex-wrap: wrap;
+    // display: flex;
+    margin-left: 24px;
+  }
+}
+
+/* Page3 */
+.bookingES3Banner {
+  height: calc(100vh - 0px);
+}
+
+.bookingES3Banner-item {
+  width: 100%;
+  height: 100%;
+}
+
+.gameCarousel {
+  width: 100%;
+  /* 讓圖片寬度自適應容器 */
+  height: 100%;
+  /* 圖片高度與輪播容器相同 */
+  object-fit: cover;
+  /* 圖片填滿容器，保持原始比例 */
+  object-position: center;
+  /* 圖片在容器中水平和垂直居中 */
+}
+
+.gameDetail {
+  background-image: url(/images/booking/gameInfoBG.jpg);
+  background-attachment: fixed;
+  /* 背景圖片固定 */
+}
+
+.gameInfo {
+  padding: 50px 0 0 0;
+}
+
+.gameInfoImgText1,
+.gameInfoImgText2 {
+  writing-mode: vertical-lr;
+  position: relative;
+  letter-spacing: 9px;
+  font-size: 18px;
+}
+
+.gameInfoImgText1 {
+  margin-top: 10px;
+  left: 10px;
+}
+
+.gameInfoImgText2 {
+  margin-top: -65px;
+  left: -30px;
+  color: #e0d5a5;
+}
+
+.gameInfoImg {
+  width: 35%;
+  display: block;
+  margin: -6px auto 0px auto;
+  padding-left: 30px;
+}
+
+.gameInfoImgDiv {
+  color: #fff;
+  width: 50%;
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.gameInfoTextDiv {
+  text-align: center;
+  width: 50%;
+  margin: 30px 0px 50px 0px;
+  padding: 0 130px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+}
+
+.gameInfoTextTitle {
+  font-size: 40px;
+  letter-spacing: 6px;
+  color: #e0d5a5;
+  font-weight: 900;
+}
+
+.gameInfoTextSubtitle {
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: 100;
+  letter-spacing: 0px;
+}
+
+strong {
+  color: #fff;
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.gameInfoTextContent {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #bbb6a7;
+}
+
+.gameSOP {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.gameSOP1,
+.gameSOP2,
+.gameSOP3,
+.gameSOP4 {
+  margin: 0 35px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.gameSOP2,
+.gameSOP3 {
+  margin-top: -31px;
+}
+
+.gameIcon {
+  font-size: 52px !important;
+  margin-bottom: 27.5px !important;
+}
+
+.gameSOPIconName {
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gameSOPIconText {
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #f0e0c8;
+  font-size: 16px;
+}
+
+.typeAndPlayer {
+  color: #fff;
+  justify-content: space-around;
+  margin-top: 140px;
+}
+
+.gameTypeImg,
+.playerImg {
+  width: 620px;
+  height: 370px;
+  opacity: 0.34;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #faf8f4;
+  box-shadow: 0px 0px 25px 2px #fffec4;
+  // display: inline-block;
+  // overflow: clip;
+}
+
+.gameInfoImg {
+  animation-name: animation-hang-sink1, animation-hang1;
+  animation-duration: 0.3s, 2.8s;
+  animation-delay: 0.8s, 0.3s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal, alternate;
+}
+
+@keyframes animation-hang1 {
+  0% {
+    transform: translateY(15px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes animation-hang-sink1 {
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.gameTypeImg:hover,
+.playerImg:hover {
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition: opacity 0.5s ease 0s;
+  // box-sizing: border-box;
+  // display: inline-block;
+  // overflow: clip;
+  animation-name: animation-hang-sink, animation-hang;
+  animation-duration: 0.3s, 1.5s;
+  animation-delay: 0s, 0.3s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal, alternate;
+}
+
+@keyframes animation-hang {
+  0% {
+    transform: translateY(8px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes animation-hang-sink {
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.playerImg {
+  width: 620px;
+  height: 370px;
+}
+
+.gameType,
+.player {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.typeTitle,
+.playerTitle {
+  margin-top: 40px;
+  color: #e0d5a5;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-shadow: rgb(255, 250, 234) 0px 0px 45px;
+}
+
+.typeContent,
+.playerContent {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+  line-height: 20px;
+}
+
+.gameReview {
+  color: #fff;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.reviewTitle {
+  font-size: 40px;
+  color: #e0d5a5;
+}
+
+.reviewDiv {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  padding: 30px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.profilePic {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 3%;
+}
+
+.reviewEditIcon {
+  position: absolute;
+  top: 10%;
+  right: 30%;
+  cursor: pointer;
+}
+
+.bookingDiv {
+  display: flex;
+  justify-content: center;
+  padding: 80px 140px;
+  margin-top: 150px;
+}
+
+.priceNoticeDiv {
+  color: #fff;
+  width: 50%;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 30px;
+}
+
+.nameAndAddress {
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.bookingStoreName {
+  font-size: 28px;
+  color: #f0e0c8;
+  font-weight: 600;
+}
+
+.WeekdaysImg,
+.HolidayImg {
+  width: 15%;
+}
+
+.gamePrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.WeekdaysP,
+.HolidayP {
+  font-size: 26px;
+  margin-left: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+.HolidayImg {
+  margin-left: 90px;
+}
+
+.gameNotice {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 29px;
+  letter-spacing: 9.2px;
+  word-spacing: 0px;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  background-color: transparent;
+  background-image: linear-gradient(175deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(152, 47, 47, 0.97) 60%);
+  border-radius: 17px;
+  padding: 10px 0px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.noticeIcon {
+  margin-right: 15px !important;
+  font-size: 25px !important;
+}
+
+.gameNoticeP {
+  text-align: center;
+  // border-bottom: 1px dashed #a8a8a8;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.dashedLine {
+  border: none;
+  border-top: 1.5px dashed #d2d2d2;
+  margin: 10px 0;
+}
+
+.bookingCalendarDiv1 {
+  // color: #000;
+  width: 50%;
+  position: relative;
+  // border: 3px solid red;
+}
+
+.alreadyBooked {
+  color: #979797 !important;
+  cursor: default !important;
+  background-color: rgba(234, 139, 7, 0.1) !important;
+}
+
+.oneSlot {
+  background-color: #60492f;
+}
+
+.testBookingForm {
+  margin-bottom: 50px;
+}
+
+.bookingForm {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.bookingFormTitle {
+  font-weight: 700;
+  margin: 15px 0 25px 8px;
+  font-size: 20px;
+}
+
+.redIcon {
+  color: red;
+}
+
+.bookingFormBtn {
+  position: relative;
+  right: -84%;
+  background-color: #f1d282;
+  border: 1px solid rgb(229 141 20 / 54%);
+  color: #863f01;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.bookingFormBtn:hover {
+  background-color: #ffe5a2;
+  color: #863f01;
+  border: 1px solid rgb(229 141 20 / 54%);
+}
+
+.closeBookingForm {
+  cursor: pointer !important;
+  font-size: 18px !important;
+  font-weight: bolder !important;
+  padding-bottom: 2px !important;
+}

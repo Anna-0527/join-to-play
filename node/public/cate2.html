@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+
+    <script>
+      let data;
+      let cate1Val = 2;
+      let cate2Val = 7;
+
+      const renderForm = () => {
+        return `
+        <form name="form1" action="" onsubmit="return false">
+          <select name="cate1" id="cate1">${
+            data
+            .map((i) => {
+              return `<option value="${i.sid}" ${cate1Val==i.sid ? 'selected' : ''}>${i.name}</option>`;
+            })
+            .join("")
+          }</select>
+          <select name="cate2" id="cate2">${
+            data.find((el) => {
+              return +el.sid === +cate1Val;
+            }).nodes
+            .map((i) => {
+              return `<option value="${i.sid}"  ${cate2Val==i.sid ? 'selected' : ''}>${i.name}</option>`;
+            })
+            .join("")
+          }</select>
+        </form>
+        `;
+      };
+
+      fetch("/cate2")
+        .then((r) => r.json())
+        .then((ar) => {
+          data = ar;
+          console.log(data);
+          info.innerHTML = renderForm();
+        });
+    </script>
+  </body>
+</html>

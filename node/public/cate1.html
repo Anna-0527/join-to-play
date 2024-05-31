@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1" action="" onsubmit="return false">
+      <select name="cate1" id="cate1"></select>
+      <select name="cate2" id="cate2"></select>
+    </form>
+
+    <script>
+      const cate1 = document.form1.cate1;
+      const cate2 = document.form1.cate2;
+      let data;
+
+      fetch("/cate2")
+        .then((r) => r.json())
+        .then((ar) => {
+          data = ar;
+          console.log(data);
+
+          cate1.innerHTML = data
+            .map((i) => {
+              return `<option value="${i.sid}">${i.name}</option>`;
+            })
+            .join("");
+
+          onCate1Changed();
+        });
+
+      const onCate1Changed = () => {
+        // 找到符合條件的第一個項目
+        const item1 = data.find((el) => {
+          return +el.sid === +cate1.value;
+        });
+        console.log(item1);
+        cate2.innerHTML = item1.nodes
+            .map((i) => {
+              return `<option value="${i.sid}">${i.name}</option>`;
+            })
+            .join("");
+      };
+
+      cate1.addEventListener("change", onCate1Changed);
+      
+    </script>
+  </body>
+</html>

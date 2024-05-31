@@ -1,0 +1,337 @@
+.form-control {
+  font-size: 14px;
+}
+
+/* .form-signin {
+  max-width: 330px;
+  padding: 1rem;
+} */
+
+.notice {
+  font-size: 12px;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.invalid:focus {
+  border-color: red;
+  box-shadow: 0 0 0.25rem rgba(255, 0, 0, 0.5);
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+}
+
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 8px 0px;
+  font-size: 12px;
+}
+.hr-sect:before,
+.hr-sect:after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}
+/* Login 頁面 */
+.LoginForm {
+  margin: auto;
+  padding-top: 20px;
+  background-color: #ffffff;
+  width: 500px;
+  height: 480px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.login_form_menu {
+  font-size: 14px;
+}
+
+.FormGroup {
+  width: 90%;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.FormInput {
+  display: block;
+  border: none;
+  height: 40px;
+  width: 200px;
+  border: 0px;
+  outline: none;
+  margin-left: 20px;
+}
+
+.FormCheck input {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+.login {
+  display: block;
+  padding: 10px;
+  margin: 0 auto 8px;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 1px;
+  width: 100%;
+}
+a.signin {
+  display: block;
+  padding: 10px;
+  margin: 0 auto 8px;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #333;
+}
+.other {
+  bottom: 20px;
+  width: 470px;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.forgot {
+  text-decoration: none;
+  display: inline-block;
+  color: #696969;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-left: 280px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-is-on {
+  background-color: #313131;
+  color: #fff;
+  border: none;
+  width: 90%;
+  height: 40px;
+  margin-top: 30px;
+}
+
+.JoinBtn {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+  height: 40px;
+  color: #313131;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+  text-decoration: none;
+  padding-top: 8px;
+}
+.autoInput {
+  width: 90%;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.JoinBtn-link {
+  text-decoration: none;
+}
+
+/* user 彈窗 end */
+/* cart 右側選單 start */
+.offcanvas .btn-close {
+  margin-right: 30px;
+  margin-top: 20px;
+}
+.cart-offcanvas-body {
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  height: 100vh;
+}
+.cart-block {
+  width: 400px;
+  position: fixed;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 10px;
+  top: 0;
+  text-align: center;
+  right: 80px;
+}
+#cart_form_menu {
+  font-size: 14px;
+  height: 100vh;
+}
+#cart_form_menu h3 {
+  position: absolute;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #333;
+  margin-top: 50px;
+  font-weight: 300;
+  left: 50px;
+}
+.cart-form-area {
+  margin-top: 30px;
+}
+.cart-other {
+  position: absolute;
+  bottom: 20px;
+  width: 200px;
+  font-weight: 500;
+  height: 40px;
+  margin-left: 140px;
+  justify-content: center;
+  border: 1px solid #696969;
+  padding-top: 10px;
+  letter-spacing: 5px;
+  border-radius: 10px;
+  background-color: #454545;
+}
+.cart-other a {
+  color: #fff;
+}
+.cart-other a:hover {
+  color: #ff6347;
+}
+.cart-checkout {
+  line-height: 20px;
+}
+
+/* 註冊頁面 */
+.join_form {
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: 微軟正黑體;
+  width: 800px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+.register-content {
+  margin-left: 70px;
+}
+
+.join_form-title {
+  margin: 20px;
+}
+
+.register-form-group {
+  margin-left: 30px;
+  height: 70px;
+}
+
+.register-label-group {
+  width: 60px;
+}
+
+.register-input-group {
+  width: 60%;
+  margin-left: 50px;
+  letter-spacing: 1px;
+}
+
+.privacy_area {
+  margin-left: 30px;
+  letter-spacing: 1px;
+}
+
+.register-btn {
+  margin-left: 150px;
+  background-color: #313131;
+  color: #ffffff;
+  width: 300px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.required {
+  content: "*";
+  display: inline-block;
+  color: red;
+}
+
+/* 編輯頁面 */
+.edit-btn {
+  margin-left: 150px;
+  background-color: #313131;
+  color: #ffffff;
+  width: 300px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+/* question-reply */
+.q-col {
+  width: 100px;
+}
+
+.q-col-1 {
+  width: 300px;
+}
+
+/* booking-list */
+.b-col {
+  width: 200px;
+}
+
+.b-col-1 {
+  width: 200px;
+}
+
+/* 忘記密碼頁 */
+.forget-section{
+  margin-left:430px;
+  width: 50%;
+}
+
+.forget-headline{
+  width: 500px;
+}
+
+.forget-btn{
+  margin-left: 200px;
+  margin-top: 20px;
+}
+.icon-padding{
+  color: red;
+  margin-left: 10px;
+}
+
+.input-mail{
+  margin-left: -50px;
+}
+
+.reset-input{
+  margin-left: -30px;
+}
+
+.show-password{
+  margin-left: 10px;
+  width: 30px;
+ 
+}
+@media screen and (max-width: 767px) {
+  
+}

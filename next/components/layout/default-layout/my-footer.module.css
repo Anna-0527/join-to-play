@@ -1,0 +1,8 @@
+@media screen and (max-width: 700px) {
+  .footerLogo p{
+    display: none;
+  }
+  .page-link li{
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="file1" onchange="selectFile()" />
+    <img src="" alt="" id="myImg" width="300" />
+    <script>
+      const file1 = document.querySelector("#file1");
+      const myImg = document.querySelector("#myImg");
+
+      function selectFile() {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          myImg.src = reader.result;  // base64 的字串資料
+          console.log(reader.result);
+        };
+
+        // 非同步的操作
+        reader.readAsDataURL(file1.files[0]);
+      }
+    </script>
+  </body>
+</html>
