@@ -176,3 +176,54 @@
 //   cursor: default;
 //   background-color: rgba(234, 139, 7, 0.1);
 // }
+
+@media screen and (max-width:376px) {
+  .calendarTitle {
+    font-size: 15px;
+  }
+
+  .bookingCalendarDiv3 {
+    margin-top: 10px;
+  }
+
+  .react-calendar__tile {
+    background-color: rgba(234, 139, 7, 0.1) !important;
+    border: 1px solid rgb(229 141 20 / 54%) !important;
+    border-radius: 10px;
+    margin: 6px 3.8px !important;
+    letter-spacing: 0;
+    height: 40px;
+    max-width: 36px !important;
+  }
+
+  .react-calendar__navigation__label,
+  .react-calendar__navigation__arrow {
+    height: 80%;
+  }
+
+  .react-calendar__navigation__label__labelText {
+    font-size: 13px;
+  }
+
+  .react-calendar__month-view__weekdays__weekday abbr {
+    font-size: 14px;
+  }
+
+  abbr {
+    font-size: 13px;
+  }
+
+  .timeSlotsTitle {
+    font-size: 15px;
+  }
+
+  .timeSlotsDiv {
+    margin: 0 0 10px 0;
+    padding: 0;
+
+  }
+
+  .timeSlots {
+    width: 90%;
+  }
+}

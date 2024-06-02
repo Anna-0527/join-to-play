@@ -27,6 +27,19 @@ const MyCalendar = ({ onNextStep, setFormData }) => {
   const [bookedTimes, setBookedTimes] = useState([]);
 
   useEffect(() => {
+    // 刪掉日期裡的"日"字(手機版)
+    const abbrElements = document.querySelectorAll(
+      "button.react-calendar__tile abbr[aria-label]"
+    );
+    abbrElements.forEach((element) => {
+      const text = element.innerText;
+      if (text.endsWith("日")) {
+        element.innerText = text.replace("日", "");
+      }
+    });
+  }, [selectedDate]);
+
+  useEffect(() => {
     fetch(BOOKING_ESCAPE_DATETIME)
       .then((response) => response.json())
       .then((data) => {

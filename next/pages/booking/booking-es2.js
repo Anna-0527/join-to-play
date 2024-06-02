@@ -136,8 +136,8 @@ export default function BookingEs2() {
 
               {/* game2 */}
               {(index + 1) % 2 === 0 && (
-                <div className="row gameSelect">
-                  <div className="col-md-6 gameText text-center">
+                <div className="row gameSelect gameSelect2">
+                  <div className="col-md-6 gameText gameText2ForSM text-center">
                     <h4 className="fw-bold mb-1">《{v.game_name}》</h4>
                     <p className="text-muted fw-bold gameName mb-3">
                       {v.game_nameEG}
@@ -167,10 +167,10 @@ export default function BookingEs2() {
                       <span className="betweenIcon">｜</span>
                       <i className="bi bi-alarm-fill me-2" />
                       {v.time}
-                      <span className="betweenIcon">｜</span>
+                      <span className="betweenIcon betweenIcon2">｜</span>
                       <FontAwesomeIcon
                         icon="fa-solid fa-sack-dollar"
-                        className="me-2"
+                        className="me-2 dollarIcon"
                         style={{ maxHeight: "14px" }}
                       />
                       {v.weekdays_price}元<span className="priceAfter">起</span>
@@ -205,7 +205,7 @@ export default function BookingEs2() {
                       </div>
                     </Link>
                   </div>
-                  <div className="col-md-6 gameImgDiv">
+                  <div className="col-md-6 gameImgDiv gameImgDiv2ForSM">
                     <img className="gameImg" src="/images/booking/game6.jpg" />
                   </div>
                 </div>

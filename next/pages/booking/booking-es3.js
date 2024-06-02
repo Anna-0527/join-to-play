@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import BookingLayout from "@/components/layout/booking-layout/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyCalendar from "@/components/booking/calendar";
@@ -81,10 +79,10 @@ export default function BookingEs3() {
       .then((response) => response.json())
       .then((data) => {
         setGameData(data);
-        // 从 game 表数据中获取 store_id
+        // 從game表數據中獲取 store_id
         const storeId = data.rows.length > 0 ? data.rows[0].store_id : null;
         if (storeId) {
-          // 根据 store_id 获取对应的 store_escape 表数据
+          // 根據 store_id 獲取對應的 store_escape 表數據
           fetch(`${STORE_ESCAPEFORES3}?store_id=${storeId}`)
             .then((response) => response.json())
             .then((storeEscapeData) => {
@@ -182,7 +180,7 @@ export default function BookingEs3() {
                 </div>
                 <div className="gameDetail">
                   {/* 第一區 遊戲介紹 */}
-                  <div className="gameInfo d-flex">
+                  <div className="gameInfo">
                     {/* 介紹左邊 */}
                     <div className="gameInfoImgDiv">
                       <p className="gameInfoImgText1 mx-auto">
@@ -205,25 +203,15 @@ export default function BookingEs3() {
                       <p className="gameInfoTextContent">{v.game_info}</p>
                       <div className="gameSOP">
                         <div className="gameSOP1">
-                          <FontAwesomeIcon
+                          {/* <FontAwesomeIcon
                             icon="fa-solid fa-users"
                             className="gameIcon"
-                            width={"55px"}
-                          />
+                          /> */}
+                          <i class="bi bi-people-fill gameIcon" />
                           <h6 className="gameSOPIconName">遊戲人數</h6>
                           <p className="gameSOPIconText">{v.player_count}</p>
                         </div>
                         <div className="gameSOP2">
-                          {/* <FontAwesomeIcon
-                            icon="fa-solid fa-flag-checkered"
-                            className="gameIcon"
-                            width={"55px"}
-                          /> */}
-                          <i className="bi bi-flag-fill gameIcon" />
-                          <h6 className="gameSOPIconName">遊玩前講解</h6>
-                          <p className="gameSOPIconText">{v.explainST_time}</p>
-                        </div>
-                        <div className="gameSOP3">
                           {/* <FontAwesomeIcon
                             icon="fa-solid fa-hourglass-start"
                             className="gameIcon"
@@ -233,12 +221,24 @@ export default function BookingEs3() {
                           <h6 className="gameSOPIconName">遊戲時間</h6>
                           <p className="gameSOPIconText">{v.time}</p>
                         </div>
+                        <div className="gameSOP3">
+                          {/* <FontAwesomeIcon
+                            icon="fa-solid fa-flag-checkered"
+                            className="gameIcon"
+                            width={"55px"}
+                          /> */}
+                          {/* <i className="bi bi-flag-fill gameIcon" /> */}
+                          <i class="bi bi-skip-start-fill gameIcon" />
+                          <h6 className="gameSOPIconName">遊玩前講解</h6>
+                          <p className="gameSOPIconText">{v.explainST_time}</p>
+                        </div>
                         <div className="gameSOP4">
-                          <FontAwesomeIcon
+                          {/* <FontAwesomeIcon
                             icon="fa-solid fa-person-through-window"
                             className="gameIcon"
                             width={"55px"}
-                          />
+                          /> */}
+                          <i class="bi bi-skip-end-fill gameIcon" />
                           <h6 className="gameSOPIconName">遊玩後講解</h6>
                           <p className="gameSOPIconText">{v.explainEND_time}</p>
                         </div>

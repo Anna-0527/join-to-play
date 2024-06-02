@@ -173,13 +173,6 @@ a {
   letter-spacing: 1px;
 }
 
-// .imgDiv {
-//   padding: 12px;
-//   background-color: #fff;
-//   border-radius: 20px;
-//   box-shadow: 0px 3px 8px #bbb;
-// }
-
 .gameImg {
   width: 100%;
   height: 100%;
@@ -234,31 +227,25 @@ a {
 
   &::after {
     content: "";
-    position: absolute;
 
     /* 絕對定位，相對於 .gameBtn 元素 */
+    position: absolute;
+
     bottom: 2px;
 
-    /* 底部對齊 */
     left: 43.5%;
 
-    /* 左側對齊 */
     width: 11%;
 
     height: 0.5px;
 
-    /* 底線高度 */
     background-color: #60492f;
 
-    /* 底線顏色 */
     transition: width 0.3s ease;
-
-    /* 過渡效果，寬度改變 */
   }
 
   &:hover::after {
     width: 0;
-
     /* 滑鼠懸停時，底線寬度變為 0，從右向左消失 */
   }
 }
@@ -277,23 +264,67 @@ a {
   }
 
   .gameText {
-    padding-top: 40px;
+    padding: 40px 30px;
   }
 
   .betweenIcon2 {
-    display: none;
-  }
-
-  .game4Info {
-    padding-left: 20px;
+    visibility: hidden;
+    flex-wrap: wrap;
+    display: flex;
+    line-height: 0;
   }
 
   .dollarIcon {
-    flex-wrap: wrap;
-    // display: flex;
-    margin-left: 24px;
+    padding-left: 3px;
+  }
+
+  .gameTag {
+    padding-right: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .gameBtn {
+    margin-top: 20px;
+    background-color: #ed6d00;
+    border-radius: 10px;
+    color: #f6f2e9;
+    letter-spacing: 5px;
+    font-weight: 800;
+
+    &::after {
+      content: "";
+      height: 0px;
+    }
+  }
+
+  .gameBtn:hover {
+    letter-spacing: 15px;
+    transition: 0.2s;
+    background-color: #e16900;
+  }
+
+  .gameBtnArrow {
+    display: none;
+  }
+
+  .gameSelect2 {
+    position: relative;
+    height: 805px;
+  }
+
+  .gameImgDiv2ForSM {
+    position: absolute;
+    top: 0;
+  }
+
+  .gameText2ForSM {
+    position: absolute;
+    top: 230px;
   }
 }
+
 
 /* Page3 */
 .bookingES3Banner {
@@ -324,6 +355,7 @@ a {
 
 .gameInfo {
   padding: 50px 0 0 0;
+  display: flex;
 }
 
 .gameInfoImgText1,
@@ -405,7 +437,7 @@ strong {
   color: #fff;
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .gameSOP1,
@@ -413,15 +445,6 @@ strong {
 .gameSOP3,
 .gameSOP4 {
   margin: 0 35px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-}
-
-.gameSOP2,
-.gameSOP3 {
-  margin-top: -31px;
 }
 
 .gameIcon {
@@ -527,11 +550,6 @@ strong {
   100% {
     transform: translateY(8px);
   }
-}
-
-.playerImg {
-  width: 620px;
-  height: 370px;
 }
 
 .gameType,
@@ -741,4 +759,139 @@ strong {
   font-size: 18px !important;
   font-weight: bolder !important;
   padding-bottom: 2px !important;
+}
+
+@media screen and (max-width:376px) {
+  .gameInfo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .gameInfoImgDiv {
+    display: none;
+  }
+
+  .gameInfoTextDiv {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gameInfoTextTitle {
+    font-size: 30px;
+  }
+
+  .gameInfoTextSubtitle {
+    font-size: 13px;
+  }
+
+  strong {
+    font-size: 20px;
+  }
+
+  .gameInfoTextContent {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .gameSOP {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 兩列，每列佔 1fr */
+    gap: 10px;
+    /* 元素之間的間距 */
+  }
+
+  .gameSOP1,
+  .gameSOP2,
+  .gameSOP3,
+  .gameSOP4 {
+    margin: 0;
+  }
+
+  .gameIcon {
+    font-size: 40px !important;
+  }
+
+  .typeAndPlayer {
+    flex-wrap: wrap;
+    margin-top: 80px;
+  }
+
+  .gameType {
+    margin-bottom: 60px;
+  }
+
+  .gameTypeImg,
+  .playerImg {
+    width: 320px;
+    height: 250px;
+    opacity: 1;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #faf8f4;
+    box-shadow: 0px 0px 15px 0px rgb(254, 253, 239, 0.6);
+  }
+
+  .typeTitle,
+  .playerTitle {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .typeContent,
+  .playerContent {
+    font-size: 15px;
+  }
+
+  .bookingDiv {
+    margin: 80px 0 0 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .priceNoticeDiv {
+    width: 90%;
+    margin: 0;
+  }
+
+  .WeekdaysP,
+  .HolidayP {
+    font-size: 15px;
+    margin-left: 10px;
+    letter-spacing: 2px;
+  }
+
+  .WeekdaysImg,
+  .HolidayImg {
+    width: 20%;
+  }
+
+  .HolidayImg {
+    margin-left: 30px;
+  }
+
+  .gameNotice {
+    font-size: 20px;
+    margin-top: 60px;
+  }
+
+  .gameNoticeP {
+    font-size: 15px;
+  }
+
+  .bookingCalendarDiv1 {
+    width: 90%;
+    margin: 80px 0;
+  }
+
+  .bookingFormBtn {
+    right: -72%;
+  }
+
+  .testBookingForm {
+    margin-bottom: 80px;
+  }
 }
